@@ -1,0 +1,72 @@
+Review
+
+The project submitted attempts to create a calculator web application based on the instructor's instructions. Below is a detailed breakdown of the submission:
+User Interface Design (20 points)
+
+The UI contains essential elements like the number keys, operator buttons (+, -, *, /), an equals (=) button for calculating results, and a display area for showing input/output. However:
+
+    The <input> field for the result display (class="display") does not work as intended because the disabled property combined with incorrect event handling impedes functionality.
+    The buttons for operations like "+" and "-" lack the necessary onclick JavaScript function calls. For instance, the * and / operations are missing proper handlers.
+    Several UI components have incorrect HTML syntax, such as unclosed <div> tags and improper nesting, which makes the UI development error-prone.
+
+Score: 10/20
+(Elements are partially present but lack organization and functionality.)
+Calculation Functionality (30 points)
+
+The calculation functionality tries to include basic operations, but:
+
+    The valueDisplay() function references an incorrect method: getElementsById (should be getElementById), causing it to fail.
+    Some input buttons don't provide any functionality, notably:
+        Operators like "×" and "÷" have no logic associated with them.
+        The = functionality isn't working as the required event listener (addEventListener) is incomplete.
+    The deleteDisplay() function syntax has major errors:
+        functiont deletedisplay contains a malformed function definition and incorrect variable reference.
+    Division by zero, or invalid expressions like 5//, don't seem to show proper error handling despite a "Syntax Error" block being implemented.
+    The eval method is being used for calculations without proper validation, which introduces potential security concerns.
+
+Score: 10/30
+(Core arithmetic operations are unreliable, incomplete, and error-prone.)
+Responsiveness and Styling (20 points)
+
+    The CSS file attempts to implement responsiveness with basic flexbox designs, utilizing justify-content and align-items. However:
+        The container and calculator classes do not align well on smaller screens due to a lack of explicit media queries. For instance, padding or font sizes are not adjusted for mobile devices.
+        There are incorrect CSS syntax errors (e.g., missing colons like box-sizing border-box; should be box-sizing: border-box;).
+        A gradient background is applied, but contrasting text colors are not maintained clearly (black text on a dark-purple background is difficult to read).
+    The overall design lacks proper spacing, making it appear cluttered.
+
+Score: 10/20
+(Styling is moderately implemented but not mobile-friendly or aesthetically polished.)
+JavaScript Functionality (20 points)
+
+The functionality provided via JavaScript exhibits several critical issues:
+
+    Syntax errors abound (e.g., let displayBox = document getElementsById( display ); is non-functional due to a malformed method call).
+    Many functional requirements, such as dynamic calculations or real-time updates without page reload, aren't reliably implemented.
+    Example of undefined functionality:
+        The calculateBtn() function doesn't invoke the calculation logic correctly due to missing connections between the UI (= button) and JavaScript.
+    Attempts to handle edge cases like empty input strings are present but incomplete (if(display trim() === "") has the right idea but fails due to buggy implementation).
+
+Score: 5/20
+(Major functionality is broken due to syntax errors and incomplete implementation.)
+Code Structure and Formatting (10 points)
+
+The code is poorly formatted with numerous structural and formatting issues:
+
+    Semantic HTML is ignored. Example:
+        Using <div> excessively instead of semantic tags like <main> or <section>.
+    In JavaScript:
+        Functions are improperly named (functiont deletedisplay()) or incorrectly structured.
+        Misplaced event listeners add to the lack of clarity.
+    In CSS:
+        Several properties are missing colons (e.g., box-sizing border-box) and braces aren't properly closed.
+    Files lack proper indentation.
+
+Score: 0/10
+(Code quality is poor and hinders readability and debugging.)
+Final Observations:
+
+While there are commendable efforts to include aspects like error handling and responsive UI components, the implementation is riddled with significant syntax errors, incomplete logic, and non-functional design elements. The overall application does not meet the instructor's requirements in a discernable way.
+
+Feed Back
+
+This submission contains several errors, including incorrectly written JavaScript, broken CSS rules, and incomplete HTML. While your concept is clear, execution needs refinement. Clean your code to fix syntax errors (e.g., replace getElementsById with getElementById()) and ensure every feature aligns with instructions
